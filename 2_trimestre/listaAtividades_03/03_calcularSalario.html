@@ -15,9 +15,24 @@
     */
 
     // Entrada
-    
+    let salario = Number(prompt(`Informe o valor do seu salário:`).trim().replace(",","."));
     // Processamento
-
+    if(salario <= 2000){
+        salario = salario + (salario * 0.15);
+        alert(`Seu salário foi reajustado para R$${salario.toFixed(2)}`.replace(".",","))
+    }
+    else if(salario > 2000 && salario < 4000){
+        salario = salario + (salario * 0.10);
+        alert(`Seu salário foi reajustado pra R$${salario.toFixed(2)}`.replace(".",","));
+    }
+    else if( salario > 4000 && salario < 7000){
+        salario = salario + (salario * 0.075);
+        alert(`Seu salário foi reajustado para R$${salario.toFixed(2)}`.replace(".",","));
+    }
+    else{
+        salario = salario + (salario * 0.05);
+        alert(`Seu salário foi rajustado para R$${salario.toFixed(2)}`.replace(".",","));
+    }
     // Saída
 
 </script>

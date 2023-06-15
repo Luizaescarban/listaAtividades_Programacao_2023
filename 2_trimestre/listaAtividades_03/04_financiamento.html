@@ -10,9 +10,18 @@
     */
 
     // Entrada
-    
+    const imovel = Number(prompt(`Insira o valor do imóvel que deseja comprar:`).trim().replace(",","."));
+    let anos = Number(prompt(`Quantos anos será realizado o financiamento?`).trim().replace(",","."));
+    const salario = Number(prompt(`Qual o valor do seu salario?`).trim().replace(",","."));
     // Processamento
-
+    anos = anos * 12;
+    const prestação = imovel / anos;
+    const porcentagemSal = salario * 0.30;
     // Saída
-
+    if(porcentagemSal > prestação){
+        alert(`Seu financiamento foi concedido e o valor da parcela final será de R$${prestação.toFixed(2)}`.replace(".",","));
+    }
+    else{
+        alert(`Seu financiamento foi negado, o valor da ultima prestação ficaria R$${prestação.toFixed(2)}`.replace(".",","));
+    }
 </script>

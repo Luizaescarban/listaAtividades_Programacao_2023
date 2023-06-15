@@ -11,9 +11,15 @@
     */
 
     // Entrada
-    
+    const kms = Number(prompt(`Informe a distância da viagem, em quilômetros:`).trim().replace(",","."));
+    const horas = Number(prompt(`Informe quantos quilômetros você pretende fazer por dia:`).trim().replace(",","."));
     // Processamento
-
+    const dias = kms / horas;
     // Saída
-
+    if(dias <= 3){
+        alert(`A viagem poderá ser realizada em qualquer período`);
+    }
+    else if(dias > 4 && dias < 10){
+        alert(`A viagem poderá ser realizada em férias de julho`)
+    }
 </script>

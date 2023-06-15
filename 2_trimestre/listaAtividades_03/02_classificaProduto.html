@@ -13,12 +13,29 @@
     */
 
     // Entrada
-    const code = Number(prompt(`Insira o código do produto`));
+    const code = Number(prompt(`Insira o código do produto:`));
     // Processamento
 if(code == 1){
-    alert(`Alimento não-perecível`)
+    alert(`Alimento não-perecível.`);
 }
-else if (code == 2 || code == 3 || code == 4){}
+else if (code == 2 || code == 3 || code == 4){
+    alert(`Alimento perecível.`);
+}
+else if(code == 5 || code == 6){
+    alert(`Vestuário.`);
+}
+else if(code == 7){
+    alert(`Higiene Pessoal.`);
+}
+else if(code <= 8 || code <= 15 ){
+    alert(`Limpeza e Utensílios Domésticos.`);
+}
+else if(code >= 16 || code <= 20){
+    alert(`Outros.`);
+}
+else{
+    alert(`Código inválido.`);
+}
     // Saída
 
 </script>
