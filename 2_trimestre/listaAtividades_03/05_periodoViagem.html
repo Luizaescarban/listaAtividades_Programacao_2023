@@ -17,9 +17,15 @@
     const dias = kms / horas;
     // Saída
     if(dias <= 3){
-        alert(`A viagem poderá ser realizada em qualquer período`);
+        alert(`A viagem poderá ser realizada em qualquer período.`);
     }
     else if(dias > 4 && dias < 10){
-        alert(`A viagem poderá ser realizada em férias de julho`)
+        alert(`A viagem poderá ser realizada em férias de julho.`);
+    }
+    else if(dias > 10 && dias < 20){
+        alert(`A viagem poderá ser realizada nas Férias de verão.`);
+    }
+    else{
+        alert(`Deverá trabalhar remoto pois a viagem durará ${dias} dias. `)
     }
 </script>

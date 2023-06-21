@@ -15,8 +15,35 @@
     */
 
     // Entrada
-    
+    const viagens = Number(prompt(`Quantas viagens foram realizadas por dia?`).trim());
+    const cargo = prompt(`Qual cargo você ocupa?(M para motorista/ C para cobrador)`).trim().toUpperCase();
+    let valor = 0
     // Processamento
+    if (cargo == "M" || cargo == "C") {
+        if (cargo == "M") {
+            if (viagens <= 10) {
+                valor = 100 + (100 * 0.20)
+                alert(`Você como motorista irá receber R$${valor.toFixed(2).replace(".", ",")}`);
+            }
+            else if (viagens > 10) {
+                valor = 100 + (100 * 0.35);
+                alert(`Você como motorista irá receber R$${valor.toFixed(2).replace(".", ",")}`);
+            }
+
+        }
+        if (cargo == "C") {
+            if (viagens <= 10) {
+                alert(`Você como cobrador não irá ganhar nenhum adicional,pois não atingiu a meta, recebendo apenas R$100,00`);
+            }
+            else if (viagens > 10) {
+                valor = 100 + (100 * 0.10);
+                alert(`Você como cobrador, bateu a meta e irá ganhar R$${valor.toFixed(2).replace(".", ",")}`);
+            }
+        }
+    }
+    else {
+        alert(`Vocẽ digitou algo errado`)
+    }
 
     // Saída
 
